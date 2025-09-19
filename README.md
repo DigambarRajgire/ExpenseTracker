@@ -27,8 +27,9 @@ Steps to run this project :
 To Connect DB : 
 
       login URL : http://localhost:8080/h2-console 
-      Credentials :  Username -> jdbc:h2:mem:testdb  
-                     Password -> passowrd  
+      Credentials :  jdbcUrl -> jdbc:h2:mem:testdb  
+                     username -> sa
+                     Password -> password  
 
 Please, Get Collection API File "Expense Tracker.postman_collection.json" 
      
