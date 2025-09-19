@@ -21,3 +21,14 @@ Steps to run this project :
       Once started, Spring Boot usually runs at:
 
       "http://localhost:8080"
+
+
+
+To Connect DB : 
+
+      login URL : http://localhost:8080/h2-console 
+      Credentials :  Username -> jdbc:h2:mem:testdb  
+                     Password -> passowrd  
+
+Please, Get Collection API File "Expense Tracker.postman_collection.json" 
+     

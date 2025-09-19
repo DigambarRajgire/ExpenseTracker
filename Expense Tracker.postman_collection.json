@@ -1,0 +1,210 @@
+{
+	"info": {
+		"_postman_id": "7b5eaad2-e615-48a4-8df8-4e6bfa948e91",
+		"name": "Expense Tracker",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "39614619"
+	},
+	"item": [
+		{
+			"name": "Createuser",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"Digmabar\",\r\n    \"password\":\"password\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/Auth/auth",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Auth",
+						"auth"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UserLooin",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"Digmabar\",\r\n    \"password\":\"password\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/Auth/login",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Expense",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJEaWdtYWJhciIsInVzZXJJZCI6IjEiLCJpYXQiOjE3NTgyODU3NDUsImV4cCI6MTc1ODI4NjM0NX0.vFeufmXkTKn-X2c5SUf2dg5iyBiRVZIn9x_mPY5u994tnmZb6S1GsFonRCvcrDmJBCrV7Nd0mlEaauyuzQZr8Q",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJEaWdtYWJhciIsInVzZXJJZCI6IjEiLCJpYXQiOjE3NTgyODU3NDUsImV4cCI6MTc1ODI4NjM0NX0.vFeufmXkTKn-X2c5SUf2dg5iyBiRVZIn9x_mPY5u994tnmZb6S1GsFonRCvcrDmJBCrV7Nd0mlEaauyuzQZr8Q",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Godan\",\r\n    \"amount\": 400.0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/Expencse/add",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Expencse",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetAllExpense",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJEaWdtYWJhciIsInVzZXJJZCI6IjEiLCJpYXQiOjE3NTgyODU3NDUsImV4cCI6MTc1ODI4NjM0NX0.vFeufmXkTKn-X2c5SUf2dg5iyBiRVZIn9x_mPY5u994tnmZb6S1GsFonRCvcrDmJBCrV7Nd0mlEaauyuzQZr8Q",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/Expencse/getExpenseById/2",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Expencse",
+						"getExpenseById",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetExpenseById",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJEaWdtYWJhciIsInVzZXJJZCI6IjEiLCJpYXQiOjE3NTgyODU3NDUsImV4cCI6MTc1ODI4NjM0NX0.vFeufmXkTKn-X2c5SUf2dg5iyBiRVZIn9x_mPY5u994tnmZb6S1GsFonRCvcrDmJBCrV7Nd0mlEaauyuzQZr8Q"
+					},
+					{
+						"key": "Cookie",
+						"value": "JSESSIONID=A6ACD97A4758A15EB1F03BC9349CFFAD"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/Expencse/getExpenseById/2",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Expencse",
+						"getExpenseById",
+						"2"
+					]
+				},
+				"description": "Generated from cURL: curl --location 'localhost:8080/Expencse/getExpenseById/2' \\\r\n--header 'Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJEaWdtYWJhciIsInVzZXJJZCI6IjEiLCJpYXQiOjE3NTgyODU3NDUsImV4cCI6MTc1ODI4NjM0NX0.vFeufmXkTKn-X2c5SUf2dg5iyBiRVZIn9x_mPY5u994tnmZb6S1GsFonRCvcrDmJBCrV7Nd0mlEaauyuzQZr8Q' \\\r\n--header 'Cookie: JSESSIONID=A6ACD97A4758A15EB1F03BC9349CFFAD'"
+			},
+			"response": []
+		},
+		{
+			"name": "GetExpenseByMonthWithYear",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJEaWdtYWJhciIsInVzZXJJZCI6IjEiLCJpYXQiOjE3NTgyODY1MTAsImV4cCI6MTc1ODI4NzExMH0.hLTC25wy8zDQ2HDlsFz_s-MRJ8dUD8hTup_7HAvq1s6Q23ZHgYp1t-7p7dX02oBXT5CUFLR7K3BJqr_zEY-hFQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/Expencse/getExpenseByMonthWithYear?month=9&year=2025",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Expencse",
+						"getExpenseByMonthWithYear"
+					],
+					"query": [
+						{
+							"key": "month",
+							"value": "9"
+						},
+						{
+							"key": "year",
+							"value": "2025"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
